@@ -27,12 +27,19 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function () {
+      // Select the balloon element
       const balloon = $('.balloon');
+
+      // Initialize the size of the balloon
       let size = 200;
+
+      // Initialize the color index and available colors
       let colorIndex = 0;
       const colors = ['red', 'green', 'blue'];
 
+      // Event handler for click event on balloon
       balloon.on('click', function () {
+        // Increase the size of the balloon on click, up to a limit
         if (size < 420) {
           size += 10;
           balloon.css('width', size + 'px');
@@ -42,26 +49,36 @@
           balloon.css('width', size + 'px');
           balloon.css('height', size + 'px');
         }
+
+        // Cycle through colors on click
         colorIndex = (colorIndex + 1) % colors.length;
         balloon.css('background-color', colors[colorIndex]);
       });
 
+      // Event handler for mouseenter event on balloon
       balloon.on('mouseenter', function () {
+        // Decrease the size of the balloon on mouseenter, if not at minimum size
         if (size > 200) {
           size -= 5;
           balloon.css('width', size + 'px');
           balloon.css('height', size + 'px');
         }
+
+        // Cycle through colors on mouseenter
         colorIndex = (colorIndex - 1 + colors.length) % colors.length;
         balloon.css('background-color', colors[colorIndex]);
       });
 
+      // Event handler for mouseleave event on balloon
       balloon.on('mouseleave', function () {
+        // Increase the size of the balloon on mouseleave, if not at maximum size
         if (size < 420) {
           size += 5;
           balloon.css('width', size + 'px');
           balloon.css('height', size + 'px');
         }
+
+        // Cycle through colors on mouseleave
         colorIndex = (colorIndex + 1) % colors.length;
         balloon.css('background-color', colors[colorIndex]);
       });

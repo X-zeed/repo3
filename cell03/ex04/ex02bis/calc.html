@@ -8,7 +8,9 @@
 <body>
 
 <form id="calculatorForm">
+  <!-- Input for left operand -->
   <input type="text" id="leftOperand" placeholder="Left operand" required>
+  <!-- Dropdown for operator selection -->
   <select id="operator" required>
     <option value="+">+</option>
     <option value="-">-</option>
@@ -16,14 +18,19 @@
     <option value="/">/</option>
     <option value="%">%</option>
   </select>
+  <!-- Input for right operand -->
   <input type="text" id="rightOperand" placeholder="Right operand" required>
+  <!-- Submit button -->
   <input type="submit" value="Try me!">
 </form>
 
+<!-- Include jQuery library -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function () {
+  // Function to perform calculation
   function calculate() {
+    // Retrieve values from inputs
     const leftOperand = parseInt($("#leftOperand").val());
     const rightOperand = parseInt($("#rightOperand").val());
     const operator = $("#operator").val();
@@ -34,7 +41,9 @@ $(document).ready(function () {
       return;
     }
 
+    // Variable to store result
     let result;
+    // Perform calculation based on selected operator
     switch (operator) {
       case '+':
         result = leftOperand + rightOperand;
@@ -71,9 +80,10 @@ $(document).ready(function () {
     alert("Result: " + result);
   }
 
+  // Event handler for form submission
   $("#calculatorForm").on("submit", function(event) {
-    event.preventDefault();
-    calculate();
+    event.preventDefault(); // Prevent default form submission
+    calculate(); // Call calculate function
   });
 
   // Alert every 30 seconds
