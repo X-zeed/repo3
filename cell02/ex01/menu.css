@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif; /* ตั้งค่าแบบอักษรเป็น Arial หรืออักษรที่ใช้งานได้ทั่วไป */
+    background-color: #f2f2f2; /* ตั้งค่าสีพื้นหลัง */
+    margin: 0; /* ยกเว้นการระบุระยะขอบ */
+    padding: 0; /* ยกเว้นการระบุระยะใน */
+}
+.container {
+    width: 80%; /* กำหนดความกว้างของ container เป็น 80% ของพื้นที่可視 */
+    margin: auto; /* จัดการตำแหน่งแนวนอนเพื่อจัดกลาง container */
+    text-align: center; /* จัดข้อความภายใน container ให้อยู่ตรงกลาง */
+}
+h1 {
+    color: #333; /* ตั้งค่าสีข้อความเป็นสีดำ */
+    margin-bottom: 20px; /* กำหนดระยะห่างด้านล่างของข้อความ */
+}
+.sandwich {
+    width: 300px; /* กำหนดความกว้างของ sandwich */
+    margin: 20px auto; /* กำหนดการจัดวางของ sandwich */
+    border: 2px solid #333; /* กำหนดเส้นขอบ sandwich */
+    border-radius: 5px; /* กำหนดขอบโค้งของ sandwich */
+    padding: 20px; /* กำหนดการเว้นระยะของเนื้อหาใน sandwich */
+    background-color: #fff; /* กำหนดสีพื้นหลังของ sandwich */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* กำหนดเงาใต้ sandwich */
+}
+.ingredients {
+    margin-bottom: 10px; /* กำหนดระยะห่างด้านล่างของส่วนผสม */
+}
+.ingredients label {
+    display: block; /* กำหนดให้ label เป็น block element */
+    margin-bottom: 5px; /* กำหนดระยะห่างด้านล่างของ label */
+    color: #333; /* กำหนดสีข้อความของ label */
+    font-weight: bold; /* กำหนดความหนาของ font */
+}
+.ingredients select {
+    width: 100%; /* กำหนดความกว้างของ dropdown menu */
+    padding: 8px; /* กำหนดการเติมระยะของเนื้อหาภายใน dropdown menu */
+    border: 1px solid #ccc; /* กำหนดเส้นขอบของ dropdown menu */
+    border-radius: 5px; /* กำหนดขอบโค้งของ dropdown menu */
+    background-color: #f9f9f9; /* กำหนดสีพื้นหลังของ dropdown menu */
+}
+.submit-btn {
+    padding: 10px 20px; /* กำหนดการเติมระยะของปุ่ม submit */
+    background-color: #4c6faf; /* กำหนดสีพื้นหลังของปุ่ม submit */
+    color: #fff; /* กำหนดสีของข้อความในปุ่ม submit */
+    border: none; /* กำหนดไม่แสดงเส้นขอบของปุ่ม submit */
+    border-radius: 5px; /* กำหนดขอบโค้งของปุ่ม submit */
+    cursor: pointer; /* กำหนดเคอร์เซอร์เป็นชื่อ */
+    transition: background-color 0.3s ease; /* กำหนดเอฟเฟคการเปลี่ยนสีพื้นหลังของปุ่ม submit */
+}
+.submit-btn:hover {
+    background-color: #3b6fcf; /* กำหนดสีพื้นหลังของปุ่ม submit เมื่อ hover */
+}

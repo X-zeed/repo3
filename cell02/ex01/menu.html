@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNCF Drop-down Menu Sandwich</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>SNCF Drop-down Menu Sandwich</h1> -->
+        <div class="sandwich">
+            <form>
+                <div class="ingredients">
+                    <label for="bread">Bread:</label> <!-- ป้ายชื่อส่วนผสมของขนมปัง -->
+                    <select id="bread" name="bread"> <!-- dropdown menu สำหรับการเลือกประเภทของขนมปัง -->
+                        <option value="baguette">Baguette</option> <!-- ตัวเลือกของ dropdown menu -->
+                        <option value="croissant">Croissant</option>
+                        <option value="brioche">Brioche</option>
+                    </select>
+                </div>
+                <div class="ingredients">
+                    <label for="filling">Filling:</label> <!-- ป้ายชื่อส่วนผสมของส่วนเสริม -->
+                    <select id="filling" name="filling"> <!-- dropdown menu สำหรับการเลือกประเภทของส่วนเสริม -->
+                        <option value="ham">Ham</option> <!-- ตัวเลือกของ dropdown menu -->
+                        <option value="cheese">Cheese</option>
+                        <option value="tomato">Tomato</option>
+                    </select>
+                </div>
+                <div class="ingredients">
+                    <label for="sauce">Sauce:</label> <!-- ป้ายชื่อส่วนผสมของน้ำจิ้ม -->
+                    <select id="sauce" name="sauce"> <!-- dropdown menu สำหรับการเลือกประเภทของน้ำจิ้ม -->
+                        <option value="mayo">Mayonnaise</option> <!-- ตัวเลือกของ dropdown menu -->
+                        <option value="mustard">Mustard</option>
+                        <option value="ketchup">Ketchup</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Order</button> <!-- ปุ่มสำหรับส่งคำสั่งการสั่งซื้อ -->
+            
+        </div>
+    </div>
+</body>
+</html>

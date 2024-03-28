@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Calculator</title>
+</head>
+<body>
+
+<form id="calculatorForm">
+  <input type="text" id="leftOperand" placeholder="Left operand" required>
+  <select id="operator" required>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <input type="text" id="rightOperand" placeholder="Right operand" required>
+  <input type="submit" value="Try me!">
+</form>
+
+<script>
+function calculate() {
+  const leftOperand = parseInt(document.getElementById("leftOperand").value);
+  const rightOperand = parseInt(document.getElementById("rightOperand").value);
+  const operator = document.getElementById("operator").value;
+
+  // Check if inputs are valid positive integers
+  if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
+    alert('Error :(');
+    return;
+  }
+
+  let result;
+  switch (operator) {
+    case '+':
+      result = leftOperand + rightOperand;
+      break;
+    case '-':
+      result = leftOperand - rightOperand;
+      break;
+    case '*':
+      result = leftOperand * rightOperand;
+      break;
+    case '/':
+      // Check for division by zero
+      if (rightOperand === 0) {
+        alert("It's over 9000!");
+        return;
+      }
+      result = leftOperand / rightOperand;
+      break;
+    case '%':
+      // Check for modulo by zero
+      if (rightOperand === 0) {
+        alert("It's over 9000!");
+        return;
+      }
+      result = leftOperand % rightOperand;
+      break;
+    default:
+      alert('Invalid operator');
+      return;
+  }
+
+  // Display result in console and alert
+  console.log("Result:", result);
+  alert("Result: " + result);
+}
+
+document.getElementById("calculatorForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  calculate();
+});
+
+// Alert every 30 seconds
+setInterval(function() {
+  alert("Please, use me...");
+}, 30000);
+</script>
+
+</body>
+</html>

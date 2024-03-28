@@ -1,0 +1,59 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.parallax-section-1 {
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-section-1 h1 {
+    color: white;
+    font-size: 36px;
+}
+
+
+.parallax-section-2 {
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-section-2 h2 {
+    font-size: 24px;
+}
+
+.parallax-section-3 {
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/4388593/pexels-photo-4388593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-section-3 h1 {
+    color: white;
+    font-size: 36px;
+} 
